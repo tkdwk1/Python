@@ -11,10 +11,16 @@ su1=int(input("숫자를 입력해주세요:")) #su1 숫자 입력받기
 su2=int(input("숫자를 입력해주세요:")) #su2 숫자 입력받기
 sum1=0 
 sum2=0 
-for i in range(su1,su2+1):
-    sum1+=i #두 수 사이의 정수의 합 계산
-    if i%2==0: #두 수 사이의 짝수의 합 계산
-        sum2+=i 
+if su1<su2:
+    for i in range(su1,su2+1):
+        sum1+=i #두 수 사이의 정수의 합 계산
+        if i%2==0: #두 수 사이의 짝수의 합 계산
+            sum2+=i 
+else:
+    for i in range(su2,su1+1):
+        sum1+=i #두 수 사이의 정수의 합 계산
+        if i%2==0: #두 수 사이의 짝수의 합 계산
+            sum2+=i 
 
 print(f"{su1}와{su2}사이의 정수의 합:{sum1}") #결과 출력
 print(f"{su1}와{su2}사이의 짝수의 합:{sum2}") #결과 출력
